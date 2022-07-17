@@ -14,7 +14,6 @@ class MyHomePage extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    Get.put(HomeController());
     return Scaffold(
       appBar: AppBar(
         title: Text(title),

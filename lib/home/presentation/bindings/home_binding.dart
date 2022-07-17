@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:movie_app/home/repository/home_repository.dart';
 
 import '../controller/home_controller.dart';
 
@@ -9,6 +10,7 @@ class HomeBinding implements Bindings {
 
   @override
   void dependencies() {
-    Get.lazyPut(() => HomeController());
+    Get.lazyPut<HomeRepository>(() => HomeRepositoryImpl());
+    Get.lazyPut(() => HomeController(repository: Get.find()));
   }
 }
